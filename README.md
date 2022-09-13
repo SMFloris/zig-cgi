@@ -1,4 +1,4 @@
-## Using Zig as a CGI script for Apache2
+## Using Zig as a CGI handler for Apache2
 
 It could prove to be a nice stateless way to run some zig programs.
 

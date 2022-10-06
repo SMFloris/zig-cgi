@@ -1,9 +1,9 @@
 FROM debian:bullseye as builder
 
-RUN apt update && apt install -y xz-utils
+RUN apt update && apt install -y xz-utils wget
 
 RUN mkdir /download
-ADD https://ziglang.org/download/0.9.1/zig-linux-x86_64-0.9.1.tar.xz /download
+RUN cd /download && wget https://ziglang.org/download/0.9.1/zig-linux-x86_64-0.9.1.tar.xz
 
 WORKDIR /download
 RUN tar -xf zig-linux-x86_64-0.9.1.tar.xz
